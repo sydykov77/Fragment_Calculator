@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/conteiner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:id="@+id/conteinr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/conteiner" />
+
+    <Button
+        android:id="@+id/btncalc1"
+        android:layout_width="wrap_content"
+        android:layout_height="77dp"
+        android:layout_below="@id/recycler_view"
+        android:onClick="Calculator"
+        android:text="Calculator" />
+
+    <Button
+        android:id="@+id/btncalc2"
+        android:layout_width="wrap_content"
+        android:layout_height="77dp"
+        android:visibility="gone"
+        android:layout_below="@id/recycler_view"
+        android:onClick="Calculator2"
+        android:text="Calculator" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_below="@id/conteinr"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <Button
+        android:layout_below="@id/recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="77dp"
+        android:layout_alignParentRight="true"
+        android:onClick="Share"
+        android:text="Share" />
+
+
+</RelativeLayout>
